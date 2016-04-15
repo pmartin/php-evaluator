@@ -11,3 +11,11 @@ Pour commencer, il faut :
  * Lancer la machine : `vagrant up`
  * Vérifier qu'on peut s'y connecter en SSH : `vagrant ssh`
  * Vérifier qu'on ait accès au site : `http://localhost:49080/phpinfo.php`
+
+Pour PHP 7 sous docker :
+
+```bash
+docker pull php:7.0-cli
+docker run php:7.0-cli php -r 'echo PHP_VERSION, "\n";'
+echo '<?php echo PHP_VERSION, "\n"; ?>' | docker run -i php:7.0-cli php
+```
