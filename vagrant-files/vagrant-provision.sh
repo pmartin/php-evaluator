@@ -34,3 +34,7 @@ sed -i 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapacc
 # Redémarrage des démons, une fois leur configuration déployée
 /etc/init.d/nginx restart
 /etc/init.d/php7.0-fpm restart
+
+# Récupération de quelques images docker, pour les pré-fetcher
+docker pull hello-world
+docker pull php:7.0-cli
