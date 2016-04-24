@@ -15,3 +15,7 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
     * Concept de `Dockerfile` + commande `docker build`
     * Construction *simple* en utilisant des paquets existant : debian jessie
     * Utilisation dans notre application
+ 5. Sécuriser un minimum
+    * Laisser n'importe qui exécuter du code = risque ; quelques exemples
+    * Sécurisation au niveau de PHP : quelques points de configuration + sécurisée
+    * Sécuration au niveau de docker : quelques limites qu'on peut mettre en place
