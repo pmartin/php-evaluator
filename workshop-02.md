@@ -9,14 +9,14 @@ Objectifs :
 
 Pour exécutr du code PHP sous docker, on a vu les deux possibilités qu'on a :
 
- * Passer le code en ligne, avec l'option `-r` de `php`
- * Passer le code sur l'entrée standard, via un *pipe*
+ * Passer le code en ligne, avec l'option `-r` de `php` ; cf `workshop/www/02/docker-php-01.php`
+ * Passer le code sur l'entrée standard, via un *pipe* ; cf `workshop/www/02/docker-php-02.php`
 
 Je pars plutôt sur la seconde approche, qui évite d'avoir trop à jongler avec des échappements.
 
 Pour plus de souplesse dans la manipulation des trois flux `stdin`, `stdout` et `stderr`, tout
 en ayant la possibilité de récupérer le status-code en retour de l'exécution de `php`, je passe
-par la fonction `proc_open()` de PHP.
+par la fonction `proc_open()` de PHP ; cf `workshop/www/02/docker-php-03.php`
 
 Attention à la configuration :
 
@@ -26,4 +26,10 @@ Attention à la configuration :
 
 ## Une classe qui encapsule tout ça
 
+Le code qu'on vient de voir fonctionne et répond à notre besoin \o/
+
+Encapsulons-le juste dans une classe, qu'on pourra utiliser pour la suite, sans avoir à trop se re-soucier
+de ce qu'elle fait *en-dessous*.
+
+Cf `workshop/www/02/docker-php-04.php` et `workshop/www/02/evaluator.php`
 

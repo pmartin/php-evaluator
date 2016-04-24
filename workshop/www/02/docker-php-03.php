@@ -1,15 +1,11 @@
 <?php
 // Essayons d'exécuter du PHP dans un container docker ;-)
 // Objectif : montrer qu'on y arrive \o/
+// Code PHP passé à php via un pipe, sur stdin
+// et on récupére stdout et stderr
+// => On passe par proc_open(), qui permet tout ça ;-)
 
 header('Content-Type: text/plain; charset=UTF-8');
-
-/*
-// Brutalement, tout est fait dans le container
-$php = 'echo "Version de PHP : ", PHP_VERSION, "\n";';
-$cmd = "docker run php:7.0-cli php -r " . escapeshellarg($php);
-passthru($cmd);
-*/
 
 // Ou alors, on envoie notre code PHP sur l'entrée standard de php
 // et on récupère la sortie standard et le code statut et la sortie d'erreurs
@@ -22,7 +18,7 @@ passthru($cmd);
 //  * "-i", puisqu'on veut échanger avec stdin/stdout du processus -> interactif
 //  * erreurs de PHP envoyées explicitement vers stderr ;-)
 
-$cmd = "docker run -i php:7.0-cli php -d 'display_errors=stderr'";
+$cmd = "docker run -i --rm php:7.0-cli php -d 'display_errors=stderr'";
 $descriptors = [
     0 => ['pipe', 'r'], // stdin
     1 => ['pipe', 'w'], // stdout
