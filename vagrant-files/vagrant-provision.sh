@@ -38,3 +38,4 @@ sed -i 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapacc
 # Récupération de quelques images docker, pour les pré-fetcher
 docker pull hello-world
 docker pull php:7.0-cli
+docker pull debian:jessie
