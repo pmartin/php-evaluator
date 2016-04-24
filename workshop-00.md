@@ -24,3 +24,14 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
     * Un docker pour construire + exécuter ?
     * Un docker pour construire + un autre pour exécuter
     * Ajouter notre nouvelle version de PHP à celles déjà exécutées plus haut
+
+Quelques autres idées de slots :
+
+ * Persistance
+    * MySQL ?
+    * Redis ? Se préterait bien aux besoins, ici ;-)
+ * Exécuter le code sur plusieurs versions de PHP en parallèle
+    * React-PHP permet ça, par exemple, ça ferait une introduction sympa
+ * Exécuter le code en arrière-plan
+    * La page de résultats s'affiche immédiatement
+    * Communication client-server pour présenter les résultats au fur et à mesure qu'ils arrivent
