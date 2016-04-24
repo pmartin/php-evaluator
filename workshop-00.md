@@ -11,3 +11,7 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
  3. Une interface web pour exécuter du PHP
     * Un formulaire avec un `<textarea>` pour saisir ce code
     * Un script de branchement
+ 4. Construire notre propre container
+    * Concept de `Dockerfile` + commande `docker build`
+    * Construction *simple* en utilisant des paquets existant : debian + dotdeb
+    * Utilisation dans notre application
