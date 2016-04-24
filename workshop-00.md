@@ -19,3 +19,8 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
     * Laisser n'importe qui exécuter du code = risque ; quelques exemples
     * Sécurisation au niveau de PHP : quelques points de configuration + sécurisée
     * Sécuration au niveau de docker : quelques limites qu'on peut mettre en place
+ 6. Construire une version personnalisée de PHP
+    * Ne pas dépendre des versions packagées par les distributions et pouvoir utiliser n'importe quelle version, y compris versions de dev
+    * Un docker pour construire + exécuter ?
+    * Un docker pour construire + un autre pour exécuter
+    * Ajouter notre nouvelle version de PHP à celles déjà exécutées plus haut
