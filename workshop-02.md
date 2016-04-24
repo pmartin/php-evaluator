@@ -33,3 +33,9 @@ de ce qu'elle fait *en-dessous*.
 
 Cf `workshop/www/02/docker-php-04.php` et `workshop/www/02/evaluator.php`
 
+## Bonus / pour la suite
+
+Aujourd'hui, cette classe code en dur le nom de l'image (et son tag) à utiliser : `php:7.0-cli`.
+
+Dans le futur, on voudra certainement rendre ceci paramétrable, pour pouvoir exécuter du code
+sous plusieurs versions de PHP -- via plusieurs images, donc ;-)
