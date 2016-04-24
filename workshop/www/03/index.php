@@ -11,7 +11,11 @@
 <body>
     <form method="post" action="eval.php">
         <p>
+            PHP code to evaluate :
+            <br>
             <textarea id="code" name="code"></textarea>
+            <br>
+            (Do not input <code>&lt;?php</code> nor <code>?&gt;</code> tags)
         </p>
         <p>
             <input type="submit">
