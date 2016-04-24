@@ -13,5 +13,5 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
     * Un script de branchement
  4. Construire notre propre container
     * Concept de `Dockerfile` + commande `docker build`
-    * Construction *simple* en utilisant des paquets existant : debian + dotdeb
+    * Construction *simple* en utilisant des paquets existant : debian jessie
     * Utilisation dans notre application
