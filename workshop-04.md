@@ -58,3 +58,26 @@ On voit qu'on a une version de PHP 5.6 installée et disponible ;-)
 
 
 ## Branchement dans notre application
+
+Il ne reste plus qu'à adapter un peu notre classe `Evaluator` pour qu'elle sache fonctionner avec
+différentes images docker (typiquement, en spécifiant l'image à utiliser lors de l'appel du constructeur).
+
+Et ensuite, une boucle dans notre script `eval.php`, pour appeler `Evaluator` sur chacune des versions
+de PHP (et images correspondantes) qui nous intéressent + revoir l'affichage des résultats.
+
+Un premier exemple de code PHP, qui doit fonctionner en 5.6 et en 7.0 :
+
+```php
+printf("Version de PHP utilisée : %s", PHP_VERSION);
+```
+
+Et un second exemple, qui doit fonctionner en PHP 7.0 mais pas 5.6 :
+
+```php
+function hello(string $who)
+{
+    printf("Hello, %s!", $who);
+}
+
+hello("World");
+```
