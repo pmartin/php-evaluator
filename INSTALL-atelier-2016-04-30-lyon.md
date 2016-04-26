@@ -26,6 +26,8 @@ Pour résumer les grandes lignes :
 La machine virtuelle avec laquelle nous travaillerons tourne sous [VirtualBox](https://www.virtualbox.org/). Vous devez 
 donc [télécharger et installer VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
+Installez aussi le [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads).
+
 # Installation Vagrant <a name="vagrant"></a>
 
 Nous ne manipulerons pas cette VM *à la main* et utiliserons [Vagrant](https://www.vagrantup.com/) pour automatiser.
