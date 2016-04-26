@@ -1,6 +1,6 @@
 Bonjour,
 
-# Introduction
+# Introduction <a name="introduction"></a>
 
 Pour l'atelier de samedi, nous aurons environ 3h devant nous. Pour en profiter au maximum, je vous propose d'effectuer
 une partie de l'installation avant de venir, cela nous permettra d'attaquer efficacement dès le début de la journée.
@@ -9,7 +9,7 @@ Pour réduire les différences entre les différents postes de chacun, nous trav
 faciliter la mise en place de celle-ci, nous utiliserons Vagrant, avec un script de provisionning qui installera tout
 ce dont nous avons besoin pour commencer l'atelier.
 
-# Checklist (#checklist)
+# Checklist <a name="checklist"></a>
 
 Pour résumer les grandes lignes :
 
@@ -96,7 +96,7 @@ cd c:\dev\php-evaluator
 vagrant halt
 ```
 
-# Et maintenant ?
+# Et maintenant ? <a name="et-maintenant"></a>
 
 Si vous avez des questions ou rencontrez des difficultés, n'hésitez pas à me faire signe, soit par mail, soit en DM
 sur [@pascal_martin](https://twitter.com/pascal_martin) si vous n'avez pas mon mail.
