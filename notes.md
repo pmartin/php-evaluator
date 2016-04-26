@@ -19,3 +19,7 @@ docker pull php:7.0-cli
 docker run php:7.0-cli php -r 'echo PHP_VERSION, "\n";'
 echo '<?php echo PHP_VERSION, "\n"; ?>' | docker run -i php:7.0-cli php
 ```
+
+La box `ubuntu/xenial64` ne fonctionne pas sous VirtualBox 5.0.18, cf [Ubuntu 16.04 current not booting in Vagrant (gurumeditation)](https://bugs.launchpad.net/cloud-images/+bug/1573058)
+=> Utilisation de `gbarbieru/xenial` à la place, au moins temporairement, tant que 5.0.18 est la version stable de VirtualBox...
+=> Ou alors, il faut re-descendre à VirtualBox 5.0.16
