@@ -74,7 +74,8 @@ vagrant up
 ```
 
 Ceci va créer la machine virtuelle et lancer son script d'installation, qui téléchargera et installera pas mal de choses
-dedans (nous en parlerons rapidement samedi).
+dedans (nous en parlerons rapidement samedi). Cette opération peut durer plusieurs minutes (et encore plus si vous
+n'aviez pas déjà la box `ubuntu/xenial64` en local, puisqu'elle sera alors automatiquement téléchargée).
 
 # Vérifier le bon fonctionnement de la machine virtuelle <a name="verifications"></a>
 
