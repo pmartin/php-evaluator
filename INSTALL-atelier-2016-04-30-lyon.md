@@ -61,11 +61,11 @@ Notes :
  * je suis encore en train de préparer cet atelier, les sources sont donc un peu *désorganisées*, mais ça ira mieux
    d'ici samedi ;-)
  * Vous n'avez pas besoin de fouiller dans les sources et exemples : c'est le contenu de l'atelier, sur lequel nous
-   nous beserons samedi ;-)
+   nous baserons samedi ;-)
 
 # Lancer le provisionning <a name="provisionning"></a>
 
-Une fois les sources obtenues, placeez-vous, en ligne de commandes, dans le répertoire les contenant, puis lancez la
+Une fois les sources obtenues, placez-vous, en ligne de commandes, dans le répertoire les contenant, puis lancez la
 commande `vagrant up` *(à vous d'adapter le chemin dans la commande ci-dessous)* :
 
 ```
