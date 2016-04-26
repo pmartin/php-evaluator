@@ -9,26 +9,30 @@ Pour réduire les différences entre les différents postes de chacun, nous trav
 faciliter la mise en place de celle-ci, nous utiliserons Vagrant, avec un script de provisionning qui installera tout
 ce dont nous avons besoin pour commencer l'atelier.
 
-# Checklist
+# Checklist (#checklist)
 
 Pour résumer les grandes lignes :
 
- * Télécharger et installer VirtualBox
- * Télécharger et install Vagrant
- * Installer le plugin vagrant-vbguest
- * Obtention des sources du projet, incluant les scripts de provisionning
- * Lancer le provisionning de la machine virtuelle
- * Vérifier le bon fonctionnement de la machine virtuelle
- * Eteindre la machine virtuelle
+ * [Télécharger et installer VirtualBox](#virtualbox)
+ * [Télécharger et install Vagrant](#vagrant)
+ * [Installer le plugin vagrant-vbguest](#vbguest)
+ * [Obtention des sources du projet, incluant les scripts de provisionning](#sources)
+ * [Lancer le provisionning de la machine virtuelle](#provisionning)
+ * [Vérifier le bon fonctionnement de la machine virtuelle](#verifications)
+ * [Eteindre la machine virtuelle](#eteindre-vm)
 
-# Installation de VirtualBox + Vagrant
+# Installation de VirtualBox (#virtualbox)
 
 La machine virtuelle avec laquelle nous travaillerons tourne sous [VirtualBox](https://www.virtualbox.org/). Vous devez 
 donc [télécharger et installer VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 
+# Installation Vagrant (#vagrant)
+
 Nous ne manipulerons pas cette VM *à la main* et utiliserons [Vagrant](https://www.vagrantup.com/) pour automatiser.
 Vous devez donc [télécharger](https://www.vagrantup.com/downloads.html) et 
 [installer](https://www.vagrantup.com/docs/installation/) Vagrant.
+
+## Plugin vbguest (#vbguest)
 
 Vous aurez également besoin du plugin [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest), que vous devez
 installer avec la commande suivante :
@@ -37,7 +41,7 @@ installer avec la commande suivante :
 vagrant plugin install vagrant-vbguest
 ```
 
-# Obtention des sources du projet
+# Obtention des sources du projet (#sources)
 
 Le script de provisionning et les fichiers de configuration qu'il utilise sont disponibles par le biais du projet
 Github suivant : [pmartin/php-evaluator](https://github.com/pmartin/php-evaluator/)
@@ -59,7 +63,7 @@ Notes :
  * Vous n'avez pas besoin de fouiller dans les sources et exemples : c'est le contenu de l'atelier, sur lequel nous
    nous beserons samedi ;-)
 
-# Lancer le provisionning
+# Lancer le provisionning (#provisionning)
 
 Une fois les sources obtenues, placeez-vous, en ligne de commandes, dans le répertoire les contenant, puis lancez la
 commande `vagrant up` *(à vous d'adapter le chemin dans la commande ci-dessous)* :
@@ -72,7 +76,7 @@ vagrant up
 Ceci va créer la machine virtuelle et lancer son script d'installation, qui téléchargera et installera pas mal de choses
 dedans (nous en parlerons rapidement samedi).
 
-# Vérifier le bon fonctionnement de la machine virtuelle
+# Vérifier le bon fonctionnement de la machine virtuelle (#verifications)
 
 Une fois le provisionning terminé, la machine virtuelle est lancée ; vérifiez que vous pouvez vous y connecter en SSH :
 
@@ -83,7 +87,7 @@ vagrant ssh
 Depuis votre poste de développement, vous devez aussi avoir accès en HTTP à une page dans la machine : 
 [http://localhost:49080/01/phpinfo.php](phpinfo.php)
 
-# Eteindre la machine virtuelle
+# Eteindre la machine virtuelle (#eteindre-vm)
 
 Il ne vous reste plus qu'à éteindre la machine virtuelle :
 
