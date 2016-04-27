@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", type: :dhcp
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -25,8 +25,8 @@ Vagrant.configure(2) do |config|
   # config.vm.network "public_network"
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder "./vagrant-files", "/tmp/vagrant-files"
-  config.vm.synced_folder "./workshop/www", "/var/www"
+  config.vm.synced_folder "./vagrant-files", "/tmp/vagrant-files", type: "nfs", mount_options: ["nolock", "actimeo=1", "fsc"]
+  config.vm.synced_folder "./workshop/www", "/var/www", type: "nfs", mount_options: ["nolock", "actimeo=1", "fsc"]
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
