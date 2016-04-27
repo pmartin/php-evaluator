@@ -28,11 +28,15 @@ donc [télécharger et installer VirtualBox](https://www.virtualbox.org/wiki/Dow
 
 Installez aussi le [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads).
 
+*Note : cette opération peut être à effectuer en `root`.*
+
 # Installation Vagrant <a name="vagrant"></a>
 
 Nous ne manipulerons pas cette VM *à la main* et utiliserons [Vagrant](https://www.vagrantup.com/) pour automatiser.
 Vous devez donc [télécharger](https://www.vagrantup.com/downloads.html) et 
 [installer](https://www.vagrantup.com/docs/installation/) Vagrant.
+
+*Note : cette opération peut être à effectuer en `root`.*
 
 ## Plugin vbguest <a name="vbguest"></a>
 
@@ -42,6 +46,8 @@ installer avec la commande suivante :
 ```
 vagrant plugin install vagrant-vbguest
 ```
+
+*Note : cette opération peut être à effectuer en `root`.*
 
 # Obtention des sources du projet <a name="sources"></a>
 
