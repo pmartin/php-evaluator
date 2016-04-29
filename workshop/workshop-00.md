@@ -24,6 +24,10 @@ Plan de l'atelier, dans les grandes lignes, slot par slot :
     * Un docker pour construire + exécuter ?
     * Un docker pour construire + un autre pour exécuter
     * Ajouter notre nouvelle version de PHP à celles déjà exécutées plus haut
+ 7. Exécution du code en asynchrone
+    * Une mini-introduction à ReactPHP et plus particulièrement `reactphp/child-process`
+    * Parallélisation de l'exécution du code sur les différentes images
+    * Tant que l'exécution n'est pas limitée par les CPUs de la machine, on y gagne en temps
 
 Quelques autres idées de slots :
 
