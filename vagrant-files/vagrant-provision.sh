@@ -28,6 +28,7 @@ systemctl enable docker
 
 # Configuration docker
 usermod -aG docker ubuntu
+usermod -aG docker vagrant
 usermod -aG docker www-evaluator
 sed -i 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"/' /etc/default/grub && update-grub
 
