@@ -14,6 +14,8 @@ $images = [
     '7.0' => 'php:7.0-cli',
 ];
 
+$before = microtime(true);
+
 $results = [];
 foreach ($images as $version => $image) {
     $evaluator = new Evaluator($image);
@@ -25,6 +27,8 @@ foreach ($images as $version => $image) {
         'error' => $evaluator->getErrors(),
     ];
 }
+
+$after = microtime(true);
 ?>
 <html>
 <head>
@@ -50,5 +54,9 @@ foreach ($images as $version => $image) {
         <pre><?= htmlspecialchars($result['error']) ?></pre>
     </div>
 <?php endforeach; ?>
+<hr>
+<div>
+    Temps total : <?= number_format($after-$before, 3, ',', ' ') ?> sec
+</div>
 </body>
 </html>
