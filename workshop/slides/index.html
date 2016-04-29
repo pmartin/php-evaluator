@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Atelier : PHP Evaluator</title>
+
+		<meta name="description" content="Slides utilisés comme support de mon atelier « créer un site pour tester du code sous plusieurs versions de PHP, avec Docker » à Lyon, le 30 avril 2016">
+		<meta name="author" content="Pascal MARTIN">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src="lib/js/jquery.min.js" type="text/javascript"></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <!--
+                <section id="info-notes-presentateur">
+                    <p>
+                        <strong>Appuyez sur <kbd>[s]</kbd> pour ouvrir les <em>notes présentateur</em> dans une nouvelle fenêtre.</strong>
+                    </p>
+                    <aside class="notes">
+                        <p>Je vais essayer d'ajouter ici, pour certains slides, des points que j'ai pu donner à l'oral lors de la présentation et/ou qui ne sont pas explicitement écrits sur les slides — afin de les rendre plus utiles aux lecteurs qui n'auraient pas assisté à la présentation.</p>
+                        <p>Le style sera volontairement un peu <em>oral</em>, se rapprochant un peu de ce qui s'est dit lors de la présentation <em>live</em>.</p>
+                    </aside>
+                </section>
+
+                <section id="use-space-key">
+                    <p>
+                        <strong>Utilisez la touche <kbd>[ESPACE]</kbd><br />pour passer au slide <em>suivant</em>.</strong>
+                    </p>
+                </section>
+                -->
+
+                <section>
+
+                    <section>
+                        <h1>Atelier</h1>
+                        <h2>
+                            Créer un site pour tester du code sous plusieurs versions de PHP, avec Docker
+                        </h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <!-- introduction -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-01</h1>
+                        <h2>Introduction, premiers pas</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <!-- slot-01 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-02</h1>
+                        <h2>Exécuter du PHP depuis PHP-FPM</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-02 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-03</h1>
+                        <h2>Une interface web pour exécuter du PHP</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-03 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-04</h1>
+                        <h2>Construire notre propre container</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-04 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-05</h1>
+                        <h2>Sécuriser un minimum</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-05 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-06</h1>
+                        <h2>Construire une version personnalisée de PHP</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-06 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Slot-07</h1>
+                        <h2>Exécution du code en asynchrone</h2>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+
+                    <!-- slot-07 -->
+                </section>
+
+
+                <section>
+                    <section>
+                        <h1>Conclusion</h1>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <!-- conclusion -->
+                </section>
+
+            </div> <!-- slides -->
+
+            <!--
+			<div id="footer" class="presentation-details">
+                <p>
+                    Pascal MARTIN, <a href="http://twitter.com/pascal_martin">@pascal_martin</a> &nbsp;— Avril 2016
+                </p>
+            </div>
+            -->
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: 'simple',
+                transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+                width: 1280,
+                height: 1024,
+                slideNumber: false,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			// Changement de footer pour afficher les credits de la photo du slide courant
+            Reveal.addEventListener('slidechanged', function (event) {
+                if ($('aside.notes p.img-attribution', event.currentSlide).length > 0) {
+                    $('#footer p').html($('aside.notes p.img-attribution', event.currentSlide).html());
+                }
+                else {
+                    $('#footer p').html("");
+                }
+            });
+
+        	/*
+            // Navigation à la souris
+            window.addEventListener("mousedown", handleClick, false);
+            window.addEventListener("contextmenu", handleClick, false);
+            function handleClick(e) {
+                e.preventDefault();
+                if(e.button === 0) Reveal.next();
+                if(e.button === 2) Reveal.prev();
+            }
+            //*/
+		</script>
+	</body>
+</html>
