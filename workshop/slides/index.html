@@ -655,6 +655,164 @@ docker run \
                         </aside>
                     </section>
 
+                    <section>
+                        <h2>Construire PHP</h2>
+                        <p>Version <em>light</em>, sans aucune extension</p>
+                        <ul>
+                            <li>Créer une image de construction</li>
+                            <li>
+                                Dépendances requises :
+                                <ul>
+                                    <li><code>unzip</code></li>
+                                    <li><code>build-essential</code></li>
+                                    <li><code>autoconf</code></li>
+                                    <li><code>bison</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Construire PHP</h2>
+                        <p>Version <em>light</em>, sans aucune extension</p>
+                        <pre><code data-trim>
+FROM debian:jessie
+MAINTAINER Pascal MARTIN &lt;contact@pascal-martin.fr&gt;
+
+RUN apt-get update &amp;&amp; \
+    apt-get install -y unzip build-essential autoconf bison &amp;&amp; \
+    apt-get clean
+
+COPY ./files/make-php.sh /tmp/
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Construire PHP</h2>
+                        <ul>
+                            <li>Récupérer les sources</li>
+                            <li><code>buildconf</code></li>
+                            <li>
+                                <code>configure</code>
+                                <ul>
+                                    <li><code>--disable-all</code></li>
+                                    <li><code>--prefix=...</code></li>
+                                </ul>
+                            </li>
+                            <li><code>make</code></li>
+                            <li><code>make install</code></li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Construire PHP</h2>
+                        <pre><code data-trim>
+cd /tmp/
+unzip php-src-master.zip
+
+cd /tmp/php-src-master/
+./buildconf
+./configure --disable-all --prefix=/usr/local/php-7.1-dev
+make -j 2 -l 4
+make install
+
+/usr/local/php-7.1-dev/bin/php --version
+/usr/local/php-7.1-dev/bin/php -m
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter PHP</h2>
+                        <ul>
+                            <li>Image <em>minimaliste</em></li>
+                            <li>Dépendances : celles requises par PHP / ses extensions</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter PHP</h2>
+                        <pre><code data-trim>
+FROM debian:jessie
+
+MAINTAINER Pascal MARTIN &lt;contact@pascal-martin.fr&gt;
+
+# Si notre 'php' avait été compilé avec un peu plus d'extensions, il aurait très probablement besoin
+# de quelques bibliothèques système pour pouvoir s'exécuter ;-)
+# RUN apt-get update &amp;&amp; apt-get install -y ... &amp;&amp; apt-get clean
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter PHP</h2>
+                        <ul>
+                            <li>Volume pour partager (lecture seule) les binaires PHP</li>
+                            <li>Variable d'environnement <code>PATH</code></li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter PHP</h2>
+                        <pre><code data-trim>
+docker run -it --rm \
+    --volume /var/www/php-build/php-7.1-dev/:/usr/local/php-7.1-dev/:ro \
+    --env PATH=/usr/local/php-7.1-dev/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+    php-7.1 php --version
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Branchement dans l'application</h2>
+                        <ul>
+                            <li>Comme avant ?</li>
+                            <li>Quelques options à passer au <code>docker run</code></li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>PHP 7.1 ?</h2>
+                        <p><a href="https://wiki.php.net/rfc/list_keys">Allow specifying keys in list()</a></p>
+                        <pre><code data-trim>
+$arr = [
+  'plop' =&gt; "Hello, World!",
+  'blah' =&gt; 123456,
+];
+
+list('blah' =&gt; $blah, 'plop' =&gt; $plop) = $arr;
+
+var_dump($blah, $plop);
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
 
                     <section>
                         <h2>Sur Github</h2>
