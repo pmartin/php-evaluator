@@ -412,7 +412,7 @@ workshop/www/02/evaluator.php
                 <section>
                     <section>
                         <h1>Slot-04</h1>
-                        <h2>Construire notre propre container</h2>
+                        <h2>Construire notre propre image</h2>
                         <aside class="notes">
                             ul>li*3
                         </aside>
@@ -425,6 +425,77 @@ workshop/www/02/evaluator.php
                             <li>Construction <em>simple</em> en utilisant des paquets existant : debian jessie</li>
                             <li>Utilisation dans notre application</li>
                         </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Dockerfile</h2>
+                        <p>Décrit la construction d'une image</p>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Dockerfile</h2>
+                        <pre><code data-trim>
+FROM debian:jessie
+
+MAINTAINER Pascal MARTIN &lt;contact@pascal-martin.fr&gt;
+
+RUN apt-get update &amp;&amp; apt-get install -y php5-cli
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Construction</h2>
+                        <pre><code data-trim>
+docker build
+                        </code></pre>
+                        <pre class="fragment"><code data-trim>
+docker build --rm --tag=php-jessie .
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Utiliser notre image</h2>
+                        <pre><code data-trim>
+docker run --rm php-jessie php --version
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Branchement dans notre application</h2>
+                        <p>Liste d'images à utiliser</p>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>PHP 7.0 vs 5.6</h2>
+                        <pre><code data-trim>
+printf("Version de PHP utilisée : %s", PHP_VERSION);
+                        </code></pre>
+                        <pre class="fragment"><code data-trim>
+function hello(string $who)
+{
+    printf("Hello, %s!", $who);
+}
+
+hello("World");
+                        </code></pre>
                         <aside class="notes">
                             ul>li*3
                         </aside>
