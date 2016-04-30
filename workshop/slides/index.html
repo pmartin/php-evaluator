@@ -294,6 +294,44 @@ echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' | docker run -i php:7.0-cli php
                         </aside>
                     </section>
 
+                    <section>
+                        <h2>Exécuter un processus</h2>
+                        <p>Depuis une page PHP / Web</p>
+                        <p>Fonction <code>passthru()</code></p>
+                        <ul>
+                            <li>Code PHP en paramètre : <code>php -r</code></li>
+                            <li>Code PHP sur <code>stdin</code></li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter un processus</h2>
+                        <p>Fonction <code>proc_open()</code></p>
+                        <ul>
+                            <li>+ souple</li>
+                            <li>+ de contrôlle sur les <code>stdin</code>, <code>stdout</code>, <code>stderr</code></li>
+                            <li>récupération du code statut</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter un processus</h2>
+                        <p>Classe PHP qui encapsule <code>proc_open()</code></p>
+                        <pre class="fragment"><code data-trim>
+workshop/www/02/docker-php-04.php
+workshop/www/02/evaluator.php
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
 
                     <section>
                         <h2>Sur Github</h2>
