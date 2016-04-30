@@ -162,6 +162,114 @@ usermod -aG docker vagrant
                         </aside>
                     </section>
 
+                    <section>
+                        <h2>Une application</h2>
+                        <ul>
+                            <li>Tester du code PHP</li>
+                            <li>Sous plusieurs versions du langage</li>
+                            <li>En <em>isolation</em></li>
+                            <li>Via un <em>site web</em></li>
+                            <li>Affichage des sorties + code statut</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Idée générale</h2>
+                        <ul>
+                            <li>
+                                Une VM, VirtualBox
+                                <ul>
+                                    <li>Un serveur capable de faire tourner Docker</li>
+                                    <li>Tout le monde sous Linux, setup simplifié</li>
+                                    <li>Vagrant : + simple que <em>à la main</em></li>
+                                </ul>
+                            </li>
+                            <li>nginx + PHP</li>
+                            <li>Page Web / formulaire</li>
+                            <li>Exécution : docker</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Pas <em>parfait</em></h2>
+                        <ul>
+                            <li>Pas docker <em>pour tout</em></li>
+                            <li>Quelques raccourcis</li>
+                            <li>Pas encore une application utilisable en production</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Installation</h2>
+                        <p>Provisionning Vagrant</p>
+                        <pre><code data-trim>
+vagrant-files/vagrant-provision.sh
+                        </code></pre>
+                        <pre><code data-trim>
+vagrant up
+vagrant ssh
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Docker</h2>
+                        <pre><code data-trim>
+docker pull image:tag
+docker pull debian:jessie
+docker pull php:7.0-cli
+                        </code></pre>
+                        <pre><code data-trim>
+docker images
+docker ps
+                        </code></pre>
+                        <pre><code data-trim>
+docker run [-i] [-t] [--rm] image:tag commande
+docker run --rm debian:jessie ls -l /
+docker run -it --rm debian:jessie /bin/bash
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter du PHP</h2>
+                        <pre><code data-trim>
+php -r 'var_dump(PHP_VERSION);'
+                        </code></pre>
+                        <pre><code data-trim>
+echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' | php
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exécuter du PHP</h2>
+                        <pre><code data-trim>
+docker run php:7.0-cli php -r 'var_dump(PHP_VERSION);'
+                        </code></pre>
+                        <pre><code data-trim>
+echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' | docker run -i php:7.0-cli php
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
                     <!-- slot-01 -->
                 </section>
 
