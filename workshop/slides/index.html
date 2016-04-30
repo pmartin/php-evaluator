@@ -535,6 +535,91 @@ hello("World");
                         </aside>
                     </section>
 
+                    <section>
+                        <h2>PHP</h2>
+                        <p>Options de sécurité</p>
+                        <ul>
+                            <li>Passées au binaire <code>php</code></li>
+                            <li>Utilisation d'un <code>php.ini</code> retouché</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>PHP</h2>
+                        <p>Options de sécurité</p>
+                        <ul>
+                            <li><code>memory_limit</code>, <code>max_execution_time</code></li>
+                            <li><code>disable_functions</code>, <code>disable_classes</code></li>
+                            <li><code>open_basedir</code></li>
+                            <li>N'activer <strong>que</strong> les extensions <em>nécessaires</em></li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Config dans l'image</h2>
+                        <p>Intégrer un fichier <code>.ini</code> spécifique à l'image</p>
+                        <pre class="fragment"><code data-trim>
+# Dockerfile
+COPY chemin-local chemin-image
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Config en local + volume</h2>
+                        <p><em>volume</em> docker = partage de fichiers entre l'hôte et un container</p>
+                        <pre class="fragment"><code data-trim>
+docker run \
+    --volume chemin-local:chemin-container:ro
+    ...
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Docker</h2>
+                        <p>Limites sur les ressources</p>
+                        <ul>
+                            <li>Réseau</li>
+                            <li>CPU</li>
+                            <li>Mémoire</li>
+                            <li>Privilèges et droits</li>
+                        </ul>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Docker</h2>
+                        <p>Options à <code>docker run</code></p>
+                        <pre><code data-trim>
+--net="none"
+                        </code></pre>
+                        <pre><code data-trim>
+--memory="32m" --memory-swap="32m"
+                        </code></pre>
+                        <pre><code data-trim>
+--cpu-quota=50000
+                        </code></pre>
+                        <pre><code data-trim>
+--user=2000:2000
+                        </code></pre>
+                        <aside class="notes">
+                            ul>li*3
+                        </aside>
+                    </section>
+
 
                     <section>
                         <h2>Sur Github</h2>
