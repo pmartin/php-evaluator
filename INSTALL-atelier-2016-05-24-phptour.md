@@ -9,6 +9,11 @@ Pour réduire les différences entre les différents postes de chacun, nous trav
 faciliter la mise en place de celle-ci, nous utiliserons Vagrant, avec un script de provisionning qui installera tout
 ce dont nous avons besoin pour commencer l'atelier.
 
+Si vous êtes à l'aise avec l'installation et la configuration de docker et que vous avez un nginx + php-fpm fonctionnel,
+vous pouvez faire tourner ailleurs (sur votre machine, par exemple) les composants décrits ci-dessous. Veillez toutefois
+à avoir un environnement avec ces composants fonctionnels pour l'atelier ; et, en cas de besoin, à vous de savoir
+dépanner votre environnement ;-)
+
 # Checklist <a name="checklist"></a>
 
 Pour résumer les grandes lignes :
