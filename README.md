@@ -7,5 +7,5 @@ This project is used as support for a workshop during which participants will se
 The workshop is made of several parts, each about half-an-hour long, which will start from (almost) scratch and go as 
 far as we can, depending on the total workshop's duration.
 
-Before coming to the workshop, you should read `INSTALL-atelier-2016-04-30-lyon.md` and follow the instructions it
+Before coming to the workshop, you should read `INSTALL-atelier-2016-05-24-phptour.md` and follow the instructions it
 contains: it will allow us to get started faster, skipping some not-that-interesting steps.
