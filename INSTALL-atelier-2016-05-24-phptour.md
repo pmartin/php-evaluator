@@ -2,7 +2,7 @@ Bonjour,
 
 # Introduction <a name="introduction"></a>
 
-Pour l'atelier de samedi, nous aurons environ 3h devant nous. Pour en profiter au maximum, je vous propose d'effectuer
+Pour l'atelier de mardi, nous aurons environ 3h devant nous. Pour en profiter au maximum, je vous propose d'effectuer
 une partie de l'installation avant de venir, cela nous permettra d'attaquer efficacement dès le début de la journée.
 
 Pour réduire les différences entre les différents postes de chacun, nous travaillerons dans une machine virtuelle. Pour 
@@ -25,6 +25,9 @@ Pour résumer les grandes lignes :
 
 La machine virtuelle avec laquelle nous travaillerons tourne sous [VirtualBox](https://www.virtualbox.org/). Vous devez 
 donc [télécharger et installer VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+
+Attention : vous devez être sous **VirtualBox 5**
+(la version 4 ne permet pas de faire fonctionner ce dont nous aurons besoin)
 
 Installez aussi le [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads).
 
@@ -64,12 +67,8 @@ Une fois les sources obtenues, vous devriez notamment avoir :
  * Un fichier `Vagrantfile`, sur lequel Vagrant se basera à l'étape suivante
  * Un répertoire `vagrant-files` qui contient notamment le script que Vagrant lancera pour installer la VM
 
-Notes : 
-
- * je suis encore en train de préparer cet atelier, les sources sont donc un peu *désorganisées*, mais ça ira mieux
-   d'ici samedi ;-)
- * Vous n'avez pas besoin de fouiller dans les sources et exemples : c'est le contenu de l'atelier, sur lequel nous
-   nous baserons samedi ;-)
+Vous n'avez pas besoin de fouiller dans les sources et exemples : c'est le contenu de l'atelier, sur lequel nous
+nous baserons mardi ;-)
 
 # Lancer le provisionning <a name="provisionning"></a>
 
@@ -82,7 +81,7 @@ vagrant up
 ```
 
 Ceci va créer la machine virtuelle et lancer son script d'installation, qui téléchargera et installera pas mal de choses
-dedans (nous en parlerons rapidement samedi). Cette opération peut durer plusieurs minutes (et encore plus si vous
+dedans (nous en parlerons rapidement mardi). Cette opération peut durer plusieurs minutes (et encore plus si vous
 n'aviez pas déjà la box `ubuntu/xenial64` en local, puisqu'elle sera alors automatiquement téléchargée).
 
 # Vérifier le bon fonctionnement de la machine virtuelle <a name="verifications"></a>
@@ -110,4 +109,4 @@ vagrant halt
 Si vous avez des questions ou rencontrez des difficultés, n'hésitez pas à me faire signe, soit par mail, soit en DM
 sur [@pascal_martin](https://twitter.com/pascal_martin) si vous n'avez pas mon mail.
 
-Dans tous les cas, à samedi !
+Dans tous les cas, à mardi !
