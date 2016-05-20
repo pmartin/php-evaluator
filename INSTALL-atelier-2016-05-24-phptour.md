@@ -98,7 +98,7 @@ vagrant ssh
 ```
 
 Depuis votre poste de développement, vous devez aussi avoir accès en HTTP à une page dans la machine : 
-[http://localhost:49080/01/phpinfo.php](phpinfo.php)
+[phpinfo.php](http://localhost:49080/01/phpinfo.php)
 
 # Eteindre la machine virtuelle <a name="eteindre-vm"></a>
 
