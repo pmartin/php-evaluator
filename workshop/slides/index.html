@@ -5,7 +5,7 @@
 
 		<title>Atelier : PHP Evaluator</title>
 
-		<meta name="description" content="Slides utilisés comme support de mon atelier « créer un site pour tester du code sous plusieurs versions de PHP, avec Docker » à Lyon, le 30 avril 2016">
+		<meta name="description" content="Slides utilisés comme support de mon atelier « créer un site pour tester du code sous plusieurs versions de PHP, avec Docker » au PHPTour, le 24 mai 2016">
 		<meta name="author" content="Pascal MARTIN">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,14 +72,8 @@
                     <section>
                         <h2>Merci !</h2>
                         <ul>
-                            <li>Norsys, pour son accueil</li>
-                            <li>
-                                AFUP Lyon (<a href="https://twitter.com/AFUP_Lyon">@AFUP_Lyon</a>), pour l'organisation
-                                <ul>
-                                    <li>Adrien - <a href="https://twitter.com/agallou">@agallou</a></li>
-                                    <li>Benoit - <a href="https://twitter.com/benoit_leveque">@benoit_leveque</a></li>
-                                </ul>
-                            </li>
+                            <li>AFUP</li>
+                            <li>Lyonnais qui ont déjà partipé à cet atelier</li>
                             <li class="fragment">Vous, levés de bon matin !</li>
                         </ul>
                         <aside class="notes">
@@ -94,18 +88,6 @@
                             <li><a href="mailto:contact@pascal-martin.fr">contact@pascal-martin.fr</a></li>
                             <li><a href="https://twitter.com/pascal_martin">@pascal_martin</a></li>
                             <li><a href="https://blog.pascal-martin.fr">blog.pascal-martin.fr</a></li>
-                        </ul>
-                        <aside class="notes">
-                            ul>li*3
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>PHPTour 2016</h2>
-                        <ul>
-                            <li>23 et 24 mai</li>
-                            <li>Clermont-Ferrand</li>
-                            <li><a href="http://event.afup.org/">event.afup.org</a></li>
                         </ul>
                         <aside class="notes">
                             ul>li*3
@@ -146,17 +128,6 @@
                             <li>Docker, premiers pas</li>
                             <li>Exécuter du code PHP, y compris dans un docker</li>
                         </ul>
-                        <aside class="notes">
-                            ul>li*3
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Oops ;-(</h2>
-                        <p>Oubli dans le provisionning vagrant</p>
-                        <pre><code data-trim>
-usermod -aG docker vagrant
-                        </code></pre>
                         <aside class="notes">
                             ul>li*3
                         </aside>
@@ -880,8 +851,8 @@ var_dump($blah, $plop);
                                 </ul>
                             </li>
                             <li>File de jobs : RabbitMQ ?</li>
-                            <li>Déploiement</li>
-                            <li>Montée en charge</li>
+                            <li>Déploiement, Montée en charge</li>
+                            <li>Docker Remote API, <code>docker-php</code></li>
                             <li>...</li>
                         </ul>
                         <aside class="notes">
@@ -936,9 +907,9 @@ var_dump($blah, $plop);
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					//{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { /*hljs.initHighlightingOnLoad();*/ } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
