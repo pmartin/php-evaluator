@@ -234,7 +234,8 @@ echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' | php
 docker run php:7.0-cli php -r 'var_dump(PHP_VERSION);'
                         </code></pre>
                         <pre><code data-trim>
-echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' | docker run -i php:7.0-cli php
+echo '&lt;?php echo PHP_VERSION, "\n"; ?&gt;' ↵
+    | docker run -i php:7.0-cli php
                         </code></pre>
                         <aside class="notes">
                             ul>li*3
@@ -548,8 +549,8 @@ COPY chemin-local chemin-image
                         <h2>Config en local + volume</h2>
                         <p><em>volume</em> docker = partage de fichiers entre l'hôte et un container</p>
                         <pre class="fragment"><code data-trim>
-docker run \
-    --volume chemin-local:chemin-container:ro
+docker run ↵
+    --volume chemin-local:chemin-container:ro ↵
     ...
                         </code></pre>
                         <aside class="notes">
@@ -654,7 +655,8 @@ FROM debian:jessie
 MAINTAINER Pascal MARTIN &lt;contact@pascal-martin.fr&gt;
 
 RUN apt-get update &amp;&amp; \
-    apt-get install -y unzip build-essential autoconf bison &amp;&amp; \
+    apt-get install -y unzip ↵
+        build-essential autoconf bison &amp;&amp; \
     apt-get clean
 
 COPY ./files/make-php.sh /tmp/
@@ -692,10 +694,12 @@ unzip php-src-master.zip
 
 cd /tmp/php-src-master/
 ./buildconf
-./configure --disable-all --prefix=/usr/local/php-7.1-dev
+./configure --disable-all ↵
+    --prefix=/usr/local/php-7.1-dev
 make -j 2 -l 4
 make install
-
+                        </code></pre>
+                        <pre><code data-trim>
 /usr/local/php-7.1-dev/bin/php --version
 /usr/local/php-7.1-dev/bin/php -m
                         </code></pre>
@@ -746,8 +750,11 @@ MAINTAINER Pascal MARTIN &lt;contact@pascal-martin.fr&gt;
                         <h2>Exécuter PHP</h2>
                         <pre><code data-trim>
 docker run -it --rm \
-    --volume /var/www/php-build/php-7.1-dev/:/usr/local/php-7.1-dev/:ro \
-    --env PATH=/usr/local/php-7.1-dev/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+    --volume /var/www/php-build/php-7.1-dev/↵
+        :/usr/local/php-7.1-dev/:ro \
+    --env PATH=/usr/local/php-7.1-dev/bin/↵
+        :/usr/local/sbin:/usr/local/bin:/usr/sbin↵
+        :/usr/bin:/sbin:/bin \
     php-7.1 php --version
                         </code></pre>
                         <aside class="notes">
